@@ -1,53 +1,94 @@
-# AI Personal Assistant (Email, Calendar, Tasks)
+# AI Personal Assistant
 
-## Pages & Features
+AI-powered personal assistant for email, calendar, and task management.
 
-### 1. Dashboard
-- Today's schedule at a glance
-- Priority tasks & upcoming deadlines
-- Unread email summary with AI highlights
-- Quick actions (compose, schedule, add task)
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Smart Inbox
-- AI-prioritized email feed (important first)
-- Auto-categorization (urgent, FYI, newsletters, spam)
-- AI-generated email summaries
-- One-click reply with AI draft suggestions
-- Snooze & follow-up reminders
+## Tech Stack
 
-### 3. Calendar
-- Day / week / month view with smart scheduling
-- AI meeting time suggestions based on availability
-- Auto-detect scheduling conflicts
-- Meeting prep briefs (attendee context, agenda)
-- Travel time & buffer suggestions
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Task Manager
-- AI task extraction from emails & meetings
-- Priority ranking & deadline suggestions
-- Drag-and-drop task boards (Kanban / list view)
-- Recurring task automation
-- Progress tracking & completion stats
+## Getting Started
 
-### 5. AI Compose
-- Email drafting with tone selection (formal, friendly, concise)
-- Meeting agenda generator
-- Follow-up email suggestions
-- Multi-language compose & translate
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Daily Briefing
-- AI-generated morning summary (schedule, priorities, emails)
-- End-of-day review & tomorrow's prep
-- Weekly digest with accomplishments & pending items
+## License
 
-### 7. Integrations
-- Email provider sync (Gmail, Outlook)
-- Calendar sync (Google, Apple, Microsoft)
-- Task tool sync (Todoist, Notion, Trello)
-- Webhook & API access
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Assistant personality & communication style
-- Working hours & focus time preferences
-- Notification rules & quiet hours
-- Privacy & data handling preferences
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
